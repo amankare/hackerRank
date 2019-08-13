@@ -1,0 +1,14 @@
+#https://www.hackerrank.com/challenges/py-if-else/problem
+
+#---
+
+numberInput = int(input())
+
+if(numberInput%2 != 0):
+    print('Weird')
+elif(numberInput >= 2 and numberInput <= 5):
+    print('Not Weird')
+elif(numberInput >= 6 and numberInput <= 20):
+    print('Weird')
+elif(numberInput%2==0 and numberInput>20):
+    print('Not Weird')
