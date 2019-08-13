@@ -1,0 +1,9 @@
+#https://www.hackerrank.com/challenges/python-division/problem
+
+#---
+
+firstNumber = int(input())
+secondNumber = int(input())
+
+print(firstNumber//secondNumber)
+print(firstNumber/secondNumber)
