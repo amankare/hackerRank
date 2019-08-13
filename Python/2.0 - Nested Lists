@@ -1,0 +1,55 @@
+#https://www.hackerrank.com/challenges/nested-list/problem
+
+#---
+
+def unique(list1): 
+    # intilize a null list 
+  uniqueList = [] 
+  # traverse for all elements 
+  for x in list1: 
+  # check if exists in unique_list or not 
+    if x not in uniqueList: 
+      uniqueList.append(x) 
+  return uniqueList
+
+
+numberOfElementsInput = int(input())
+
+mainList = []
+
+if (numberOfElementsInput >=2 and numberOfElementsInput <= 5):
+  for i in range(0, numberOfElementsInput):
+    elements = [str(input()), float(input())]
+    mainList.append(elements)
+else:
+    print('Error')
+
+mainList.sort()
+
+listToDictionary = {subList[0]:subList[1] for subList in mainList}
+
+dictionaryValues = list(listToDictionary.values())
+uniqueValues = unique(dictionaryValues)
+uniqueValues.sort()
+secondLargest = uniqueValues[1]
+
+
+results = []
+for i in mainList:
+  if (i[1] == secondLargest):
+    results.append(i[0])
+
+results.sort()
+for i in results:
+  print(i)
+  
+
+
+    
+
+
+
+
+
+
+  
