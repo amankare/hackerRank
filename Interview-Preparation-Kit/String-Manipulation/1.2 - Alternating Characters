@@ -1,0 +1,13 @@
+#https://www.hackerrank.com/challenges/alternating-characters/problem?h_l=interview&playlist_slugs%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D=strings
+
+#---
+
+textQuery = int(input())
+for i in range(textQuery):
+    stringInput = input()
+    count = 0
+    for i in range(1, len(stringInput)):
+        if stringInput[i-1] == stringInput[i]:
+            count += 1
+    print (count)
+
