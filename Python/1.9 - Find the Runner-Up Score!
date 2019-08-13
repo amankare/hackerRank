@@ -1,0 +1,36 @@
+#https://www.hackerrank.com/challenges/find-second-maximum-number-in-a-list/problem
+
+#---
+
+numberOfElements = int(input())
+inputArray = list(set(map(int, input().split())))
+inputArray.sort()
+print(inputArray[-2])
+
+
+###########
+
+###Solution using NumPy below: 
+
+
+#import numpy as np
+
+#numberOfElementsInput = int(input())
+
+#if (numberOfElementsInput >=2 and numberOfElementsInput <= 10):
+#    elementsList = [int(x) for x in input().split()]
+#    for i in elementsList:
+#      if (i >= -100 and i <= 100):
+#        result = np.unique(np.array(elementsList))
+#        sortedResult = -np.sort(-result)
+#      else:
+#        print('Please enter a number between -100 and 100')   
+#        break  
+#    print(sortedResult[1])     
+#else:
+#    print("Please enter a number between 2 and 10.")
+    
+
+
+
+
