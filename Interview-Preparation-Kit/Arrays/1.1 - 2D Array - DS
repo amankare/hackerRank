@@ -1,0 +1,22 @@
+#https://www.hackerrank.com/challenges/2d-array/problem?h_l=interview&playlist_slugs%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D=arrays
+
+#---
+
+def readInput():
+    twoDimensionalArray = []
+    for i in range(6):
+        twoDimensionalArray.append([int(x) for x in input().split()])
+    return twoDimensionalArray
+
+def sumOfHourGlass(i, j, twoDimensionalArray):
+    interimSum = 0
+    interimSum += sum(twoDimensionalArray[i][j:j+3])
+    interimSum += twoDimensionalArray[i+1][j+1]
+    interimSum += sum(twoDimensionalArray[i+2][j:j+3])
+    return interimSum
+
+twoDimensionalArray = readInput()
+
+resultingArray = [sumOfHourGlass(i, j, twoDimensionalArray) for i in range(4) for j in range(4)]
+
+print(max(resultingArray))
