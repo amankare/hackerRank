@@ -1,0 +1,28 @@
+#https://www.hackerrank.com/challenges/python-print/problem
+
+#---
+
+def convert(listInput): 
+      
+    # Converting integer list to string list 
+    toString = [str(i) for i in listInput] 
+      
+    # Join list items using join() 
+    result = int("".join(toString)) 
+      
+    return(result) 
+  
+
+numberInput = int(input())
+list1=[]
+i = 1
+while i <= numberInput:
+    list1.append(i)
+    i += 1
+
+print(convert(list1))
+
+
+
+
+
