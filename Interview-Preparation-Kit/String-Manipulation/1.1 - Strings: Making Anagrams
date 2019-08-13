@@ -1,0 +1,19 @@
+#https://www.hackerrank.com/challenges/ctci-making-anagrams/problem?h_l=interview&playlist_slugs%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D=strings
+
+#---
+
+#!/bin/python3
+from collections import *
+
+#Number of Deletions
+def numberOfDeletions(string1, string2):
+    placeHolder1 = string1 - string2
+    placeHolder2 = string2 - string1
+    result = placeHolder1 + placeHolder2
+    return len(list(result.elements()))
+
+string1 = Counter(input())
+string2 = Counter(input())
+
+print(numberOfDeletions(string1, string2))
+
