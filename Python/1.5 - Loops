@@ -1,0 +1,16 @@
+#https://www.hackerrank.com/challenges/python-loops/problem
+
+#---
+
+integerInput = int(input())
+
+integerArray = []
+
+x = 0
+while(x<integerInput):
+    integerArray.append(x)
+    x += 1
+
+for i in integerArray:
+    print(i*i)
+    
