@@ -1,0 +1,30 @@
+#https://www.hackerrank.com/challenges/finding-the-percentage/problem
+
+#---
+
+numberInput = int(input())
+mainList = []
+
+for i in range(0, numberInput):
+  if (numberInput >= 2 and numberInput <= 10):
+    userInput = input()
+    key, value1, value2, value3 = userInput.split(" ") 
+    subDictionary = {key : (float(value1) + float(value2) + float(value3))}
+    mainList.append(subDictionary)
+
+  else:
+    print("Please choose a number between 2 and 10")
+
+nameInput = str(input())
+
+for dictionary in mainList:
+  for key, value in dictionary.items():
+    if (nameInput == key):
+      average = float(value/3)
+      
+print('{0:.2f}'.format(average))
+
+
+
+
+
