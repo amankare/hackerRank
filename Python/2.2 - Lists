@@ -1,0 +1,57 @@
+#https://www.hackerrank.com/challenges/python-lists/problem
+
+#---
+
+numberOfEntries = int(input())
+
+mainList = []
+  
+for i in range(0, numberOfEntries):
+
+  argumentList = list(map(str, input().split(' ')))
+  
+  if 'insert' in argumentList:
+    argumentList.remove(argumentList[0])
+    argumentList = list(map(int, argumentList))
+    index = int(argumentList[0])
+    element = argumentList[1]
+    mainList.insert(index, element) 
+
+  elif 'print' in argumentList:  
+    argumentList.remove(argumentList[0])
+    argumentList = list(map(int, argumentList))
+    print(mainList)
+
+  elif 'remove' in argumentList:
+    argumentList.remove(argumentList[0])
+    argumentList = list(map(int, argumentList))
+    elementToBeRemoved = argumentList[0]
+    mainList.remove(elementToBeRemoved)
+
+  elif 'append' in argumentList:
+    argumentList.remove(argumentList[0])
+    argumentList = list(map(int, argumentList))
+    for i in range(0, len(argumentList)):
+      mainList.append(argumentList[i])
+
+  elif 'sort' in argumentList:
+    argumentList.remove(argumentList[0])
+    argumentList = list(map(int, argumentList))
+    mainList.sort()
+  
+  elif 'pop' in argumentList:
+    argumentList.remove(argumentList[0])
+    argumentList = list(map(int, argumentList))
+    mainList.pop()
+
+  elif 'reverse' in argumentList:
+    argumentList.remove(argumentList[0])
+    argumentList = list(map(int, argumentList))
+    mainList.reverse()
+  
+  
+  
+  
+  
+  
+
