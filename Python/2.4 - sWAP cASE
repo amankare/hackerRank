@@ -1,0 +1,26 @@
+#https://www.hackerrank.com/challenges/swap-case/problem?h_r=profile
+
+#---
+
+def swap_case(s):
+    result = ''
+    if len(s) > 0 and len(s) <= 1000:
+
+        for character in s:
+            if character.isupper() == True:
+                elementToAdd = str(character.lower())
+                result += elementToAdd
+            elif character.islower() == True:
+                elementToAdd = str(character.upper())
+                result += elementToAdd
+            else:
+                result += character
+
+    return result
+
+
+
+if __name__ == '__main__':
+    s = input()
+    result = swap_case(s)
+    print(result)
