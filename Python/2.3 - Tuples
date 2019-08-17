@@ -1,0 +1,10 @@
+#https://www.hackerrank.com/challenges/python-tuples/problem?h_r=profile
+
+#---
+
+numberOfInputs = int(input())
+
+mainList = list(map(int, input().split(' ')))
+mainTuple = tuple(mainList)
+print(hash(mainTuple))
+
