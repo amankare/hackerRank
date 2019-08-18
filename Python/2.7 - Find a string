@@ -1,0 +1,25 @@
+#https://www.hackerrank.com/challenges/find-a-string/problem
+
+#---
+
+def count_substring(string, sub_string):
+  counter = 0
+  if len(string) >= 1 and len(string) <= 200:
+    startingPoint = 0
+    endingPoint = len(sub_string)
+    for i in range(0, len(string)):
+      if string.find(sub_string, startingPoint, endingPoint) == i:
+        counter += 1
+        startingPoint += 1
+        endingPoint += 1  
+      else:
+        startingPoint += 1
+        endingPoint += 1  
+    return counter
+
+if __name__ == '__main__':
+    string = input().strip()
+    sub_string = input().strip()
+    
+    count = count_substring(string, sub_string)
+    print(count)
