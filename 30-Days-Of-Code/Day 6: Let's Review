@@ -1,0 +1,39 @@
+#https://www.hackerrank.com/challenges/30-review-loop/problem
+
+#---
+
+stringList = []
+numberOfInputs = int(input())
+
+
+
+if numberOfInputs >= 1 and numberOfInputs <= 10:
+  for i in range(0, numberOfInputs):
+    stringInput = str(input())
+    if len(stringInput) >= 2 and len(stringInput) <= 10000:
+      stringList.append(stringInput)
+
+
+for word in stringList:
+  evenLetters = []
+  oddLetters = []
+
+  printOdd = []
+  printEven = []
+  for letterNumber in range(0, len(word)):
+    if letterNumber%2 == 0:
+      evenLetters.append(word[letterNumber])      
+    elif letterNumber%2 == 1:
+      oddLetters.append(word[letterNumber])
+    
+  printEven = ''.join(evenLetters)
+  printOdd = ''.join(oddLetters)
+  print(printEven, printOdd)
+    
+    
+
+
+
+
+
+
