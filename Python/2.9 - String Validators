@@ -1,0 +1,54 @@
+#https://www.hackerrank.com/challenges/string-validators/problem
+
+#---
+
+inputString = str(input())
+
+if len(inputString) > 0 and len(inputString) < 1000:
+
+  isAlnumList = []
+  for letter in inputString:
+    if letter.isalnum() == True:
+      isAlnumList.append(letter)
+  if len(isAlnumList)>0:
+    print('True')
+  else:
+    print('False')
+
+  isAlphaList = []
+  for letter in inputString:
+    if letter.isalpha() == True:
+      isAlphaList.append(letter)
+  if len(isAlphaList)>0:
+    print('True')
+  else:
+    print('False')
+
+  isDigitList = []
+  for letter in inputString:
+    if letter.isdigit() == True:
+      isDigitList.append(letter)
+  if len(isDigitList)>0:
+    print('True')
+  else:
+    print('False')
+
+  isLowerList = []
+  for letter in inputString:
+    if letter.islower() == True:
+      isLowerList.append(letter)
+  if len(isLowerList)>0:
+    print('True')
+  else:
+    print('False')
+
+  isUpperList = []
+  for letter in inputString:
+    if letter.isupper() == True:
+      isUpperList.append(letter)
+  if len(isUpperList)>0:
+    print('True')
+  else:
+    print('False')
+ 
+  
