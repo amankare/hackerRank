@@ -1,0 +1,16 @@
+#https://www.hackerrank.com/challenges/30-conditional-statements/problem
+
+#---
+
+inputInteger = int(input())
+
+if (inputInteger>= 1 and inputInteger<=100):
+    if (inputInteger%2 != 0):
+        print('Weird')
+    elif (inputInteger%2 == 0 and inputInteger <=5 and inputInteger >= 2):
+        print('Not Weird')
+    elif (inputInteger%2 == 0 and inputInteger <=20 and inputInteger >= 6):
+        print('Weird')
+    elif (inputInteger%2 == 0 and inputInteger >20):
+        print('Not Weird')
+
