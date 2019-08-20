@@ -1,0 +1,42 @@
+#https://www.hackerrank.com/challenges/designer-door-mat/problem
+
+#--
+
+row, column = map(int, input().split()) 
+
+unitSymbol = '.|.'
+welcomeString = 'WELCOME'
+
+if row > 5 and row < 101 and row%2 == 1:
+  if column > 15 and column < 303:  
+
+    numberOfUnitsTop = 0
+    for i in range(row//2):
+      print(
+        (unitSymbol*numberOfUnitsTop).rjust(column//2-1,'-') 
+        + unitSymbol 
+        + (unitSymbol*numberOfUnitsTop).ljust(column//2-1,'-')
+        )
+      numberOfUnitsTop += 1
+        
+    for i in range(1):
+      print(
+        (welcomeString).center(column,'-')
+        )
+
+    numberOfUnitsBottom = (row//2-1)
+    for i in range(row//2):
+      if i in range(0,row//2-1):
+        print(
+            (unitSymbol*numberOfUnitsBottom).rjust(column//2-1,'-') 
+            + unitSymbol 
+            + (unitSymbol*numberOfUnitsBottom).ljust(column//2-1,'-')
+            )
+      elif i == (row//2-1):
+          print((unitSymbol*numberOfUnitsBottom).rjust(column//2-1,'-') 
+        + unitSymbol 
+        + (unitSymbol*numberOfUnitsBottom).ljust(column//2-1,'-')
+        ,end = '')
+      numberOfUnitsBottom -= 1
+
+      
