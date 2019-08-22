@@ -1,0 +1,37 @@
+#https://www.hackerrank.com/challenges/alphabet-rangoli/problem
+
+#---
+
+def print_rangoli(size):
+  if size > 0 and size < 27:
+
+    alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
+
+    printList = []
+    width = (size*4)-3
+
+    sideLetters = []
+    i = size-1 
+    while i > (-1):
+      centerLetter = alphabet[i]
+      sideLetters.append(alphabet[i])
+      left = '-'.join(sideLetters)
+      left = left[:-1]
+      right = left[::-1]
+      printList.append(left + centerLetter + right)
+      print(
+        (left + centerLetter + right).center(width,'-')
+        )
+      i -= 1
+
+    i = len(printList)-2
+    while i > -1:
+      print(
+        (printList[i]).center(width, '-')
+      )
+      i -= 1
+    
+
+if __name__ == '__main__':
+    n = int(input())
+    print_rangoli(n)
