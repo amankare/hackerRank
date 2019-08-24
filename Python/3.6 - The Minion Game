@@ -1,0 +1,27 @@
+#https://www.hackerrank.com/challenges/the-minion-game/problem
+
+#---
+
+def minion_game(string):
+    # your code goes here
+    sortedVowelsList = set('AEIOU')
+    sorted(sortedVowelsList)
+    stuartScore = kevinScore = 0
+
+    for index, letter in enumerate(string):
+      if letter in sortedVowelsList:
+        kevinScore += len(string) - index
+      else:
+        stuartScore += len(string) - index
+
+    if stuartScore > kevinScore:
+      print('Stuart', stuartScore)
+    elif kevinScore > stuartScore:
+      print('Kevin', kevinScore)
+    elif stuartScore == kevinScore:
+      print('Draw')
+
+
+if __name__ == '__main__':
+    s = input()
+    minion_game(s)
