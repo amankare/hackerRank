@@ -1,0 +1,21 @@
+#https://www.hackerrank.com/challenges/maximize-it/problem?h_r=profileMaximize It!
+
+
+
+#---
+
+def readints():
+    return [int(f) for f in input().split()]
+
+def newpos(pos, arr, MOD):
+    arrsq = [elt*elt%MOD for elt in arr]
+    return set((a+b)%MOD for a in arrsq for b in pos)
+
+k, m = readints()
+pos = {0}
+for _ in range(k):
+    n, *arr = readints()
+    assert len(arr)==n
+    pos = newpos(pos, arr, m)
+print(max(pos))
+    
