@@ -1,0 +1,24 @@
+#https://www.hackerrank.com/challenges/merge-the-tools/problem
+
+#---
+
+def merge_the_tools(string, k):
+    # your code goes here
+ 
+    i = 0
+    map, to_print = {}, ""
+    while i < len(string):
+        if i % k == 0 and i != 0:
+            print(to_print)
+            map, to_print = {}, ""
+        if string[i] not in map.keys():
+            map[string[i]] = 0
+            to_print += string[i]
+        i += 1
+    print(to_print)
+
+    
+if __name__ == '__main__':
+    string, k = raw_input(), int(raw_input())
+    merge_the_tools(string, k)
+    
